@@ -1,0 +1,27 @@
+#data structure innovacer interview
+Find an element in infinite array --------------------------------------------------------------------------------------------
+find two index in array which give sum of number ------------------------------------------------------------------------------------------
+What is Global interpreter lock? --------------------------------------------------------------------------------------------
+What are full join and left join between two tables? -----------------------------
+How to handle multiple requests for a server? ------------------------------------------------------------------
+What if the request load is such that the server runs short on resources?
+Let's say I installed some more machines. Now, how will the requests be delivered to these machines since I made just one domain available to the public?
+What are the different data types in Python? ---------------------------------------------------------------------------------
+Tell us one of your professional achievements, which you feel is the best so far? -----------------------------------------------------------------
+Python related questions (microservices etc), Django related questions, Django Rest Framework related questions, DS/Algo questions --------------------------------
+Index of element in sorted rotated array ------------------------------------------------------------------------
+Given two strings find minimum window which contains all characters of second string
+Design Review system which will scale upto 150 million requests
+Cost optimaztion design keeping AWS billing in mind
+Questions on your primary coding language. As I said Python, so asked about garbage collection in Python, GIL, dunder methods etc. -----------------------
+Basic Sql queries, Unix command, about ITIL process and about past projects
+Questions on stack, trees, and other data structures
+given a sentence of words in form of string, sort the sentence in terms of words length.
+Application of BFS and DFS
+search an element in an infinite list ------------------------------------------------------------------------------------------------------------------
+Compare strings
+Edit Distance(Dynamic programming)
+Stack vs Queue
+How would you make a app like google?
+Mostly SQL related and OLAP/OLTP based
+How to detect a loop in linked list?
