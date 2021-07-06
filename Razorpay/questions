@@ -1,0 +1,56 @@
+In memory SQL machine coding ########################################################
+
+Red bus system design #################################
+
+Desin a notification system. ########################################################
+There are multiple channels via which you can send the notifications and there success rate was given.
+Choose the best channel and also have handeled the case if a channel failed to send a notification.
+
+Design a parking lot system ###################################
+
+Design a multilevel hotel and implement it. ###################################
+
+Given a service running on a set of servers,
+each with an initial % success factor,
+design a load-balancer. Design the same load-balancer for the case when the success factor can change dynamically over a period of time.
+You have to write the code for both the parts and make a functional demo. The demo can have any interface (CLI/webapp).
+
+Design and implement search engine ##################################
+
+A development question like create an elevator system.run ############################
+
+Design a parking lot registration system where you will assign car registration number #################
+to the slot of the parking lot and you have to write functions for allocation, deallocation and finding slot or car.
+
+###################################################################################################################################################
+
+GFG greedy problem was asked in interview (easy)
+
+Given two sorted arrays of size m and n+m. Merge them in to 1 single sorted array with out extra space and in o(n) time.
+
+You have a huge stream of numbers coming in say n numbers which are distinct but not in order.
+There are two numbers missing from it. Find those missing two numbers.
+
+You are supposed to input stream of n number,
+but 2 numbers were lost during transmission.
+The numbers ranged from 1 to n.
+You donot have n given to you, but you need to figure out yourself,
+what you know for sure is that exactly two numbers are missing. Find the missing numbers.
+
+Search for a zero-sum subarray in a given array.
+
+finding the second largest number from an array
+
+What's the runtime complexity of this recursive algorithm...
+
+Find if there exist a triplet in array such that a[i]<a[j]<a[k] and i<j<k
+
+In a given array, you have to find the maximum sum possible with the below conditions
+a) You can pick the single element
+b) You can pick elements, than in that case you have to multiply them and add to sum
+c) Each element can be used once only.
+
+Given 2 arrays of integers [1,2,3,3,5] [3,5] find the intersection between both arrays and return those integers. In this case output will be [1,2]
+
+Implement a stack which will have 2 methods getMax() and max(), where getMax() will return max value from the stack,
+where as max() will return maximum value from the stack as well as pop the maximum value from stack.

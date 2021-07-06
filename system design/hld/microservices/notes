@@ -1,0 +1,99 @@
+- scale cube
+
+    it is 3 dimentional cube whwre we can scale the microservcies
+    - horizontal scaling
+    - breaking down the microservice into different parts (functional decomposition)
+    - data layer scaling
+
+    in data layer scaling we basically divide our data into different databases/location and we store the logical binding of data somewhere else
+
+    like data for users with user id 1 - 10000 will get stored in database 1
+    data for users with user id 10001 - 20000 will get stored in database 2
+
+- api gateway
+
+    interface for all the backend microservices
+    if you decompose your microservices functionally you dont have make changes in ui code
+    api gateway can call multiple microservcies for data parallely
+    microservices and api gateway should be in same network
+    you can configure serial or parallel calls in api gateway
+
+    you can call differnt microservices using differnt method rest, websocket, rpc, https, http
+
+    - bff (backend for frontend)
+        differnet api gateways for web, mobile and third party integration
+
+        differnt stategy for api calls  -  in mobile dont call for data at once unlike web
+                                        -  instead you call for data once you scroll
+
+    - can act as a loadbalancer
+    - api health monitoring
+    - api versioning
+    - A/B testing
+    - caching
+
+- service registry
+
+    identify network address of all the instances/replicas of microservices
+
+    it is a database which contains network address of all the rplicas of microservice
+
+    API gateway or other microservices can call service registry to get all the instances of a particular
+    service before calling it for data
+
+    usecase:
+
+        when making a serial call from one microservice to another microservice internally
+        the microservice whi is seeking data from other should know the no of instances of replicas it has
+
+    how registry happens:
+
+        self:
+            scalling up:
+            as soon as the scalling happens and server is up it register its network address in service registry
+
+            scalling down:
+            every x number of seconds each replicas in microservcies updates its latest network address in service registry
+            if any replica fails to update the network address. service registry removes its address.
+            every time we have a latest set of address
+
+        third party
+
+            sevice registry listens to any new machine spawn or any machine going down in the cluster
+            it keeps on pinging the new machines to know which service it is adn its address
+
+            it helps in monitioring the uptime of the service. periodic polling
+
+            if service is down it can be configured for calling third party service or serve the cached data
+
+            can be configured to talk to load balancer to scale up the service if any service is down or on high load
+
+            service registry can be chached and have faliure thresold ... to force fetch the new network addresses
+
+- inter service communication
+
+    sync:
+        service should be available all the time
+        if servcie is down error comes
+
+    async:
+        instead of rest call we push the data into the queue
+        when the service is back up it can consume the mesage in the queue ad update the data
+
+        no need of service discovery queue should be up
+
+    recommeded : rest call if service is down and error comes push the data into queue which will be consumed after service is up
+                    or return chached data
+
+- circuit breaking
+
+    retry rest call in case of faliure eg. recall 5 times afterbevery 2 sec
+    this will overload/overwhelm the microservice with retries
+
+    better way to handle:
+
+
+
+
+
+
