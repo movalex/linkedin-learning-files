@@ -5,7 +5,8 @@
     - breaking down the microservice into different parts (functional decomposition)
     - data layer scaling
 
-    in data layer scaling we basically divide our data into different databases/location and we store the logical binding of data somewhere else
+    in data layer scaling we basically divide our data into different databases/location
+    and we store the logical binding of data somewhere else
 
     like data for users with user id 1 - 10000 will get stored in database 1
     data for users with user id 10001 - 20000 will get stored in database 2
@@ -82,8 +83,10 @@
 
         no need of service discovery queue should be up
 
-    recommeded : rest call if service is down and error comes push the data into queue which will be consumed after service is up
-                    or return chached data
+    recommeded : rest call if service is down and error comes push the data into queue
+                            which will be consumed after service is up
+                or return chached data
+                call some backup third party service
 
 - circuit breaking
 
@@ -92,7 +95,17 @@
 
     better way to handle:
 
+    make anote of which service failed how many times
+    support retun cached resposne - last successful response -- in case of ui rendered data
 
+    pass in queue - in case of order update inventory
+
+    call third party service - video processing, image processing - fallback
+
+    lets heal the microservice - time is configrable
+    partialy open curcuit - after some time it pings the service one time ...
+    if success response fully close the circuit
+    if error open the circiut
 
 
 
